@@ -28,7 +28,7 @@
               url: url,
               dataType: 'jsonp',
               success: function(data) {
-                  name = data.name;
+                  name = data.name.text;
                   callback(name);
               }
         });
