@@ -22,14 +22,15 @@
     //     }, wait*1000);
     // };
 
-    ext.make_call_temp = function(callback) {
+    ext.make_call_temp = function() {
         var url = 'https://www.eventbriteapi.com/v3/events/20789736662?token=WFGW7FS5KX72BLBLZUXN';
         $.ajax({
               url: url,
-              dataType: 'jsonp',
+              //dataType: 'jsonp',
               success: function(data) {
                   var name = data['name']['text'];
-                  callback(name);
+                  console.log(name);
+                  return name;
               }
         });
     }
