@@ -13,7 +13,7 @@
 
     // Functions for block with type 'w' will get a callback function as the 
     // final argument. This should be called to indicate that the block can
-    // stop waiting.
+    // stop waiting
     // ext.wait_random = function(callback) {
     //     wait = Math.random();
     //     console.log('Waiting for ' + wait + ' seconds');
