@@ -29,7 +29,7 @@
               method: 'GET',
               dataType: 'jsonp',
               success: function(data) {
-                  name = data.name.text;
+                  name = data.name[0];
                   console.log(name);
                   callback(name);
               }
