@@ -26,6 +26,7 @@
         var url = 'https://www.eventbriteapi.com/v3/events/20789736662?token=WFGW7FS5KX72BLBLZUXN';
         $.ajax({
               url: url,
+              method: 'GET',
               //dataType: 'jsonp',
               success: function(data) {
                   var name = data['name']['text'];
