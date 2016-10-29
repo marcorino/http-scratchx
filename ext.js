@@ -38,7 +38,7 @@
     var descriptor = {
         blocks: [
             //['w', 'wait for random time', 'wait_random'],
-            ['R', 'current temperature in city %s', 'make_call_temp']
+            ['R', 'Event name', 'make_call_temp']
         ]
     };
 
