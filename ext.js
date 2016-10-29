@@ -25,7 +25,7 @@
     var url_beginning = 'https://www.eventbriteapi.com/v3/events/20789736662?token=WFGW7FS5KX72BLBLZUXN';
 
     ext.make_call_temp = function(callback) {
-        //var url = 'https://www.eventbriteapi.com/v3/events/20789736662?token=WFGW7FS5KX72BLBLZUXN';
+        // var url = 'https://www.eventbriteapi.com/v3/events/20789736662?token=WFGW7FS5KX72BLBLZUXN';
         // $.ajax({
         //       url: url,
         //       method: 'GET',
@@ -44,7 +44,7 @@
                 var fullNameText = fullNameRequest.responseText;
                 try {
                     output = fullNameText;
-                    callback('output');
+                    callback(typeof(fullNameText));
                     output = '';
                 } catch (e) {
                     callback('error');
