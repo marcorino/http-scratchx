@@ -25,16 +25,7 @@
     ext.make_call_temp = function(callback) {
         var url = 'https://www.eventbriteapi.com/v3/events/20789736662?token=WFGW7FS5KX72BLBLZUXN';
         return 'namee';
-        $.ajax({
-              url: url,
-              method: 'GET',
-              dataType: 'jsonp',
-              success: function(data) {
-                  name = data['name']['text'];
-                  console.log(name);
-                  callback('name');
-              }
-        });
+        
     }
 
     // Block and block menu descriptions
