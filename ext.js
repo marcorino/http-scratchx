@@ -29,9 +29,9 @@
               method: 'GET',
               dataType: 'jsonp',
               success: function(data) {
-                  name = data.name[0];
+                  name = data['name']['text'];
                   console.log(name);
-                  callback(name);
+                  return name;
               }
         });
     }
