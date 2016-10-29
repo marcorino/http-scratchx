@@ -31,7 +31,7 @@
               success: function(data) {
                   name = data['name']['text'];
                   console.log(name);
-                  return 'name';
+                  callback('name');
               }
         });
     }
