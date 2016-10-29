@@ -21,11 +21,39 @@
     //         callback();
     //     }, wait*1000);
     // };
+    var output = '';
+    var url_beginning = 'https://www.eventbriteapi.com/v3/events/20789736662?token=WFGW7FS5KX72BLBLZUXN';
 
     ext.make_call_temp = function(callback) {
-        var url = 'https://www.eventbriteapi.com/v3/events/20789736662?token=WFGW7FS5KX72BLBLZUXN';
-        return 'namee';
+        //var url = 'https://www.eventbriteapi.com/v3/events/20789736662?token=WFGW7FS5KX72BLBLZUXN';
+        // $.ajax({
+        //       url: url,
+        //       method: 'GET',
+        //       dataType: 'jsonp',
+        //       success: function(data) {
+        //           name = data['name']['text'];
+        //           console.log(name);
+        //           callback('name');
+        //       }
+        // });
+
+        var fullNameRequest = new XMLHttpRequest();
         
+        fullNameRequest.onreadystatechange = function() {
+        if (fullNameRequest.readyState === XMLHttpRequest.DONE) {
+          var fullNameText = fullNameRequest.responseText;
+          try {
+                output = fullNameText['name']['text'];
+            }
+            callback(output);
+            output = '';
+          } catch (e) {
+            callback('error');
+          }
+        }
+      };
+      fullNameRequest.open("GET", url_beginning);
+      fullNameRequest.send();
     }
 
     // Block and block menu descriptions
