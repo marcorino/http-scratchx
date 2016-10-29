@@ -29,7 +29,7 @@
               dataType: 'jsonp',
               success: function(data) {
                   var name = data['name']['text'];
-                  return name;
+                  callback(name);
               }
         });
     }
