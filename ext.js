@@ -40,20 +40,19 @@
         var fullNameRequest = new XMLHttpRequest();
         
         fullNameRequest.onreadystatechange = function() {
-        if (fullNameRequest.readyState === XMLHttpRequest.DONE) {
-          var fullNameText = fullNameRequest.responseText;
-          try {
-                output = fullNameText['name']['text'];
+            if (fullNameRequest.readyState === XMLHttpRequest.DONE) {
+                var fullNameText = fullNameRequest.responseText;
+                try {
+                    output = fullNameText['name']['text'];
+                    callback(output);
+                    output = '';
+                } catch (e) {
+                    callback('error');
+                }
             }
-            callback(output);
-            output = '';
-          } catch (e) {
-            callback('error');
-          }
         }
-      };
-      fullNameRequest.open("GET", url_beginning);
-      fullNameRequest.send();
+        fullNameRequest.open("GET", url_beginning);
+        fullNameRequest.send();
     }
 
     // Block and block menu descriptions
