@@ -43,7 +43,7 @@
             if (fullNameRequest.readyState === XMLHttpRequest.DONE) {
                 var fullNameText = fullNameRequest.responseText;
                 try {
-                    output = fullNameText.toString() + 'nnn';
+                    output = JSON.parse(fullNameText).name.text;
                     callback(output);
                     output = '';
                 } catch (e) {
