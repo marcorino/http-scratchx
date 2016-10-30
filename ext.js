@@ -41,7 +41,7 @@
         
         fullNameRequest.onreadystatechange = function() {
             if (fullNameRequest.readyState === XMLHttpRequest.DONE) {
-                var fullNameText = fullNameRequest.responseText;
+                var fullNameText = fullNameRequest;
                 try {
                     output = fullNameText;
                     callback(fullNameText);
