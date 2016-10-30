@@ -22,10 +22,8 @@
     //     }, wait*1000);
     // };
 
-    var xhr;
-
     var createCORSRequest = function(method, url) {
-        xhr = new XMLHttpRequest();
+        var xhr = new XMLHttpRequest();
         if ("withCredentials" in xhr) {
             // Check if the XMLHttpRequest object has a "withCredentials" property.
             // "withCredentials" only exists on XMLHTTPRequest2 objects.
@@ -77,7 +75,7 @@
 
         var xhr = createCORSRequest('GET', url_beginning);
         if (!xhr) {
-            throw new Error('CORS not supported');
+            callback('CORS not supported');
         }
 
         // fullNameRequest.open("GET", url_beginning);
