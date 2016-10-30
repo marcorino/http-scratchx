@@ -44,7 +44,7 @@
                 var fullNameText = fullNameRequest.responseText;
                 try {
                     fullNameText = JSON.Parse(fullNameText);
-                    output = fullNameText['name']['text'];
+                    output = fullNameText.name.text;
                     callback(output);
                     output = '';
                 } catch (e) {
