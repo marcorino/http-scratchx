@@ -26,33 +26,33 @@
 
     ext.make_call_temp = function(callback) {
         // var url = 'https://www.eventbriteapi.com/v3/events/20789736662?token=WFGW7FS5KX72BLBLZUXN';
-        // $.ajax({
-        //       url: url,
-        //       method: 'GET',
-        //       dataType: 'jsonp',
-        //       success: function(data) {
-        //           name = data['name']['text'];
-        //           console.log(name);
-        //           callback('name');
-        //       }
-        // });
+        $.ajax({
+              url: url_beginning,
+              method: 'GET',
+              dataType: 'jsonp',
+              success: function(data) {
+                  //name = data['name']['text'];
+                  console.log(data);
+                  callback('name');
+              }
+        });
 
-        var fullNameRequest = new XMLHttpRequest();
+        // var fullNameRequest = new XMLHttpRequest();
         
-        fullNameRequest.onreadystatechange = function() {
-            if (fullNameRequest.readyState === XMLHttpRequest.DONE) {
-                var fullNameText = fullNameRequest;
-                try {
-                    output = fullNameText;
-                    callback(fullNameText);
-                    output = '';
-                } catch (e) {
-                    callback('error');
-                }
-            }
-        }
-        fullNameRequest.open("GET", url_beginning);
-        fullNameRequest.send();
+        // fullNameRequest.onreadystatechange = function() {
+        //     if (fullNameRequest.readyState === XMLHttpRequest.DONE) {
+        //         var fullNameText = fullNameRequest.responseText;
+        //         try {
+        //             output = fullNameText;
+        //             callback(fullNameText);
+        //             output = '';
+        //         } catch (e) {
+        //             callback('error');
+        //         }
+        //     }
+        // }
+        // fullNameRequest.open("GET", url_beginning);
+        // fullNameRequest.send();
     }
 
     // Block and block menu descriptions
