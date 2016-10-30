@@ -22,8 +22,10 @@
     //     }, wait*1000);
     // };
 
+    var xhr;
+
     var createCORSRequest = function(method, url) {
-        var xhr = new XMLHttpRequest();
+        xhr = new XMLHttpRequest();
         if ("withCredentials" in xhr) {
             // Check if the XMLHttpRequest object has a "withCredentials" property.
             // "withCredentials" only exists on XMLHTTPRequest2 objects.
