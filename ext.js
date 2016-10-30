@@ -44,7 +44,7 @@
                 var fullNameText = fullNameRequest.responseText;
                 try {
                     output = fullNameText;
-                    callback(typeof(fullNameText));
+                    callback(fullNameText);
                     output = '';
                 } catch (e) {
                     callback('error');
