@@ -37,7 +37,7 @@
                     callback(output);
                     output = '';
                 } catch (e) {
-                    callback('error');
+                    callback('errors');
                 }
             }
         }
