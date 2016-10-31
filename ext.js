@@ -34,10 +34,10 @@
                 try {
                     fullNameText = JSON.Parse(fullNameText);
                     output = fullNameText;
-                    callback(output);
+                    callback(fullNameRequest.responseText);
                     output = '';
                 } catch (e) {
-                    callback('errors');
+                    callback('errorss');
                 }
             }
         }
