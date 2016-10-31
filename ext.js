@@ -34,7 +34,7 @@
                 try {
                     fullNameText = JSON.Parse(fullNameText);
                     output = fullNameText;
-                    callback(fullNameRequest.responseText);
+                    callback(fullNameRequest.status);
                     output = '';
                 } catch (e) {
                     callback('errorss');
